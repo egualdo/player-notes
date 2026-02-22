@@ -22,7 +22,7 @@
                             required autofocus>
                     </div>
                     @error('email')
-                        <p class="mt-2 text-sm text-red-600">{{ }}</p>
+                        <p class="mt-2 text-sm text-red-600">{{ 'email error' }}</p>
                     @enderror
                 </div>
 
@@ -35,7 +35,7 @@
                             required>
                     </div>
                     @error('password')
-                        <p class="mt-2 text-sm text-red-600">{{ }}</p>
+                        <p class="mt-2 text-sm text-red-600">{{ 'password error' }}</p>
                     @enderror
                 </div>
 

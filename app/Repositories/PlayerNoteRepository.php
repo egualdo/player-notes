@@ -44,13 +44,6 @@ class PlayerNoteRepository implements PlayerNoteRepositoryInterface
         });
     }
 
-    public function delete(int $noteId): bool
-    {
-        return DB::transaction(function () use ($noteId) {
-            return $this->model->where('id', $noteId)->delete();
-        });
-    }
-
     public function find(int $id): ?PlayerNote
     {
         return $this->model->with(['author', 'player'])->find($id);

@@ -9,6 +9,5 @@ interface PlayerNoteRepositoryInterface
 {
     public function getForPlayer(int $playerId, int $perPage = 15): LengthAwarePaginator;
     public function create(array $data): PlayerNote;
-    public function delete(int $noteId): bool;
     public function find(int $id): ?PlayerNote;
 }

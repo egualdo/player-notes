@@ -11,8 +11,7 @@ class RolePermissionSeeder extends Seeder
 {
     public function run(): void
     {
-        // // Limpiar caché de permisos
-        // app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
+
 
         // 1. Crear Permisos
         $permissions = [
@@ -78,7 +77,7 @@ class RolePermissionSeeder extends Seeder
             'view-player-activity',
         ]);
 
-        // 3. Asignar roles a usuarios existentes (ejemplo)
+        // 3. Asignar roles a usuarios existentes
         // Asignar admin al usuario con ID 1
         $adminUser = User::find(1);
         if ($adminUser) {
@@ -89,6 +88,11 @@ class RolePermissionSeeder extends Seeder
         $managerUser = User::find(2);
         if ($managerUser) {
             $managerUser->assignRole('support_manager');
+        }
+
+        // Asignar viewer a los usuarios "jugadores" en este caso no tienen permisos de dejar notas
+        foreach (User::where('id', '>', 2)->get() as $value) {
+            $value->assignRole('viewer');
         }
     }
 }

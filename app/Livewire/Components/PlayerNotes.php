@@ -64,7 +64,7 @@ class PlayerNotes extends Component
 
     public function render()
     {
-        $notes = $this->noteRepository->getForPlayer($this->playerId, 10);
+        $notes = $this->noteRepository->getForPlayer($this->playerId, 3);
 
         return view('livewire.components.player-notes', [
             'notes' => $notes,

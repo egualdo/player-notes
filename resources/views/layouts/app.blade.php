@@ -41,10 +41,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
-
-                <div>
-                    {{-- avatar/menu --}}
-                </div>
             </header>
         @endauth
         <main class="flex-1 overflow-y-auto p-6">

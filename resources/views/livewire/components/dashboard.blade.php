@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto p-6 space-y-6">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div class="lg:col-span-2 space-y-6">
-                <x-card>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h2 class="text-xl font-medium">Mi perfil</h2>
                     </div>
@@ -17,10 +17,10 @@
                             <p class="text-sm text-gray-500">{{ auth()->user()->email }}</p>
                         </div>
                     </div>
-                </x-card>
+                </div>
 
                 @can('create-player-notes')
-                    <x-card>
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
                         <div class="flex items-center justify-between mb-4">
                             <h2 class="text-xl font-medium">Agregar nota a otro jugador</h2>
                         </div>
@@ -50,7 +50,7 @@
                                 Selecciona un jugador para ver y agregar notas.
                             </div>
                         @endif
-                    </x-card>
+                    </div>
                 @endcan
             </div>
         </div>

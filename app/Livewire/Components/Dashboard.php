@@ -10,7 +10,7 @@ class Dashboard extends Component
 {
     public $players;
     public $selectedPlayer;
-    public $currentUserId;
+    public int $currentUserId;
 
     protected $rules = [
         'selectedPlayer' => 'nullable|exists:users,id',
@@ -18,7 +18,7 @@ class Dashboard extends Component
 
     public function mount(): void
     {
-        $this->players = Player::all();
+        $this->players = Player::whereNotIn('id', [1, 2])->get();
         $this->selectedPlayer = null;
         $this->currentUserId = Auth::id();
     }
