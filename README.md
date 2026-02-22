@@ -10,10 +10,10 @@ Player Notes History
 
 # instrucciones:
 
-### 1. correr migraciones y seeders
+1.  correr migraciones y seeders
 
-### 2. logueo y prueba de funcionalidades segun permisos de usuarios
+2.  logueo y prueba de funcionalidades segun permisos de usuarios
 
 # tests:
 
-### php artisan test (ejecuta todos los tests)
+php artisan test (ejecuta todos los tests)
