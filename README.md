@@ -4,16 +4,16 @@ Player Notes History
 
 # Base de datos:
 
-## mysql
+    uso: mysql
 
-## nombre: player_notes
+    nombre: player_notes
 
 # instrucciones:
 
-## 1. correr migraciones y seeders
+### 1. correr migraciones y seeders
 
-## 2. logueo y prueba de funcionalidades segun permisos de usuarios
+### 2. logueo y prueba de funcionalidades segun permisos de usuarios
 
 # tests:
 
-## php artisan test (ejecuta todos los tests)
+### php artisan test (ejecuta todos los tests)
